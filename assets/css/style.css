@@ -1,0 +1,115 @@
+@font-face {
+    font-family: "babayka";
+    src: url(../font/babayka_font.ttf);
+}
+:root{
+    --milk: #FDEFD0;
+    --caramel: #FFD59A;
+    --green: #7c9a32;
+    --plum: #503D3F;
+    --gray: #615756;
+}
+*{
+    font-family: "babayka";
+    box-sizing: border-box;
+    font-weight: 600;
+    margin: 0;
+    padding: 0;
+    color: var(--plum);
+    font-size: 20px;
+}
+@keyframes logo-rotation {
+    0%{
+        transform: rotate(0deg);
+    }
+    100%{
+        transform: rotate(360deg);
+    }
+}
+.logo{
+    width: 8vh;
+    animation: logo-rotation 5s linear infinite;
+}
+header{
+    background-color: var(--caramel);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: .5vh 4vw;
+    position: fixed;
+    width: 100%;
+    z-index: 999;
+}
+nav{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.link{
+    text-decoration: none;
+    transition: .25s ease-in-out;
+    position: relative;
+    font-size: 23px;
+}
+.link::after{
+    content: "";
+    position: absolute;
+    bottom: -.4vh;
+    width: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: var(--gray);
+    height: 0.5vh;
+    transition: .3s ease-in-out;
+}
+.link:hover::after{
+    width: 100%;
+}
+.link:hover{
+    text-shadow: 0 0 .4vh var(--gray);
+}
+h1{
+    font-size: 5vh;
+}
+.welcome{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    gap: 2vw;
+    position: relative;
+}
+.image1{
+    width: 40vh;
+    height: 35vh;
+}
+.image2{
+    width: 20vh;
+    height: 30vh;
+    position: absolute;
+    bottom: 5vh;
+    left: 10vw;
+}
+.image3{
+    width: 15vh;
+    height: 13vh;
+    position: absolute;
+    transform: ;
+    bottom: 3vh;
+    left: 20vw;
+}
+.welcome>div{
+    width: 60vw;
+    text-align: right;
+    text-shadow: 0 0 1vh var(--caramel);
+    display: flex;
+    flex-direction: column;
+    gap: 2vh;
+}
+.welcome>div>h1{
+    background-color: var(--green);
+    color: var(--milk);
+    text-align: center;
+    border-radius: 2vh;
+    text-shadow: none;
+}
