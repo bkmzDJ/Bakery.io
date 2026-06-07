@@ -8,6 +8,7 @@
     --green: #7c9a32;
     --plum: #503D3F;
     --gray: #615756;
+    --bord: #e20f0f;
 }
 *{
     font-family: "babayka";
@@ -39,11 +40,13 @@ header{
     position: fixed;
     width: 100%;
     z-index: 999;
+    height: 9vh;
 }
 nav{
     display: flex;
     align-items: center;
     justify-content: space-between;
+    width: 40%;
 }
 .link{
     text-decoration: none;
@@ -51,65 +54,118 @@ nav{
     position: relative;
     font-size: 23px;
 }
-.link::after{
-    content: "";
-    position: absolute;
-    bottom: -.4vh;
-    width: 0;
-    left: 50%;
-    transform: translateX(-50%);
-    background-color: var(--gray);
-    height: 0.5vh;
-    transition: .3s ease-in-out;
-}
-.link:hover::after{
-    width: 100%;
-}
 .link:hover{
-    text-shadow: 0 0 .4vh var(--gray);
+    color: var(--bord);
+}
+main{
+    padding: 3vw;
 }
 h1{
     font-size: 5vh;
+    background-color: var(--green);
+    color: var(--milk);
+    text-align: center;
+    border-radius: 2vh;
+    width: 30%;
+    
 }
 .welcome{
     display: flex;
+    flex-direction: column;
     align-items: center;
-    justify-content: center;
+    justify-content: space-between;
     min-height: 100vh;
-    gap: 2vw;
-    position: relative;
+    padding: 15vh 0;
+}
+.welcome>hr{
+    width: 70%;
+    border: 0.1vh solid var(--caramel);
+    box-shadow: 0 0 4vh var(--gray);
 }
 .image1{
     width: 40vh;
-    height: 35vh;
+    height: 100%;
 }
 .image2{
     width: 20vh;
     height: 30vh;
     position: absolute;
-    bottom: 5vh;
-    left: 10vw;
+    bottom: 0vh;
+    left: 0vw;
 }
 .image3{
     width: 15vh;
     height: 13vh;
     position: absolute;
-    transform: ;
-    bottom: 3vh;
-    left: 20vw;
+    bottom: -3vh;
+    left: 9vw;
 }
-.welcome>div{
-    width: 60vw;
+.wel{
+    width: 80vw;
     text-align: right;
     text-shadow: 0 0 1vh var(--caramel);
     display: flex;
-    flex-direction: column;
     gap: 2vh;
+    align-items: center;
+    justify-content: center;
+    gap: 2vw;
+    height: 30vh;
 }
-.welcome>div>h1{
+.wel-1>div>span{
+    display: block;
     background-color: var(--green);
     color: var(--milk);
     text-align: center;
     border-radius: 2vh;
     text-shadow: none;
+    font-size: 5vh;
+}
+.wel-2>div>span{
+    font-size: 5vh;
+}
+.wel-2>div>a{
+    background-color: var(--bord);
+    padding: 1.5vh;
+    text-decoration: none;
+    border-radius: 1vh;
+    width: 40%;
+    text-align: center;
+    color: var(--milk);
+    transition: .2s ease-in-out;
+}
+.wel-2>div>a:hover{
+    transform: scale(1.05); 
+}
+.wel-2{
+    position: relative;
+    padding-left: 13vw;
+}
+.wel-2>div{
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    gap: 2vh;
+    justify-content: center;
+    align-items: center;
+}
+/* о нас */
+.info{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 3vh;
+}
+.info>p{
+    width: 100%;
+}
+.info>p:first-child{
+    text-align: left;
+}
+.middle-p{
+    text-align: right;
+}
+.info>p:last-child{
+    text-align: center;
 }
