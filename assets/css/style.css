@@ -34,6 +34,9 @@
 html{
     scroll-behavior: smooth;
 }
+html::-webkit-scrollbar{
+    display: none;
+}
 header{
     background-color: var(--caramel);
     display: flex;
@@ -69,8 +72,8 @@ h1{
     color: var(--milk);
     text-align: center;
     border-radius: 2vh;
-    width: 30%;
-    
+    padding:1vh 5vw;
+    margin: 5vh;
 }
 .welcome{
     display: flex;
@@ -159,6 +162,7 @@ h1{
     justify-content: center;
     align-items: center;
     gap: 3vh;
+    padding-top: 5vh;
 }
 .info>p{
     width: 100%;
@@ -198,4 +202,43 @@ h1{
     height: 100%;
     width: 28vw;
     border-radius: 1vh;
+}
+/* Заказ инфо */
+.order{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding-top: 5vh;
+}
+.conditions{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    margin-top: 3vh;
+}
+.conditions>img{
+    width: 35%;
+    height: 63vh;
+    border-radius: 1vh;
+}
+.conditions>ul{
+    display: flex;
+    flex-direction: column;
+    gap: 2vh;
+    width: 60%;
+}
+.conditions>ul>span{
+    background-color: var(--bord);
+    color: var(--milk);
+    padding: 1vh 1vw;
+    border-radius: 1vh;
+    text-align: center;
+}
+.conditions>ul>li{
+    transition: .2s ease-in-out;
+}
+.conditions>ul>li:hover{
+    text-shadow: 0 0 1vh var(--plum);
 }
