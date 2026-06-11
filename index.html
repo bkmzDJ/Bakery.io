@@ -8,13 +8,17 @@
   </head>
   <body>
     <header>
-      <img src="./assets/img/logo.png" alt="" class="logo" />
+      <div class="logotype">
+        <img src="./assets/img/logo.png" alt="" class="logo" />
+        <span>Cake Moment</span>
+      </div>
+      
       <nav>
         <a href="#main" class="link">Главная</a>
         <a href="#info" class="link">О нас</a>
         <a href="#order" class="link">Товары</a>
-        <a href="" class="link"></a>
-        <a href="" class="link"></a>
+        <a href="#map" class="link">Адрес</a>
+        <a href="#cont" class="link">Контакты</a>
       </nav>
     </header>
     <main>
@@ -29,13 +33,13 @@
             </p>
           </div>
           <img src="./assets/img/img1.png" alt="" class="image1" />
-        </div><hr>
+        </div>
+        <hr>
         <div class="wel-2 wel">
           <img src="./assets/img/img2.png" alt="" class="image2" />
           <img src="./assets/img/img3.png" alt="" class="image3" />
           <div>
             <span>Работаем на заказ и всегда есть свежие пирожные к чаю.</span>
-            <!-- <a href="">Смотреть десерты</a> -->
           </div>
         </div>
 
@@ -68,6 +72,26 @@
           </ul>
         </div>
       </section>
+      <section class="map" id="map">
+        <h1>Здесь мы живем</h1>
+        <iframe src="https://yandex.ru/map-widget/v1/?um=constructor%3Acf94799aa6ad2e6bd8a954cf82c110e3e246d31d6052db068ef1360497a37792&amp;source=constructor" width="100%" height="585" frameborder="0"></iframe>
+        <span>📍 г. Москва, ул. Белинского, д. 108.</span>
+      </section>
+      <section class="prices">
+        <h1>Популярные товары</h1>
+        <div class="goods">
+          <div class="item1 item"><span class="price">2 500 ₽</span><span class="namegood">Небесный Ламбет</span></div>
+          <div class="item2 item"><span class="price">2 600 ₽</span><span class="namegood">Жемчужная рапсодия</span></div>
+          <div class="item3 item"><span class="price">2 300 ₽</span><span class="namegood">Цветочная нежность</span></div>
+          <div class="item4 item"><span class="price">2 200 ₽</span><span class="namegood">Прованс</span></div>
+          <div class="item5 item"><span class="price">2 400 ₽</span><span class="namegood">Оливковый сад</span></div>
+          <div class="item6 item"><span class="price">2 500 ₽</span><span class="namegood">Gothic Romance</span></div>
+        </div>
+      </section>
     </main>
+    <footer id="cont">
+      <div class="f1">Cake Moment<div><a href="mailto:example@example.com">example@example.com</a><a href="tel:+70000000000">+70000000000</a></div></div>
+      <div class="f2">&copy;Пекарня &laquo;Cake Moment&raquo;, не является комерческим сайтом! </div>
+    </footer>
   </body>
 </html>
