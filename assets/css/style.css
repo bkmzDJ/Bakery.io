@@ -36,7 +36,6 @@
     align-items: center;
     justify-content: center;
     gap: 2vw;
-    
 }
 .logotype>span{
     color: var(--milk);
@@ -64,6 +63,7 @@ nav{
     align-items: center;
     justify-content: center;
     gap: 2vw;
+    transition: .7s ease-in-out;
 }
 .link{
     text-decoration: none;
@@ -84,7 +84,7 @@ h1{
     text-align: center;
     border-radius: 2vh;
     padding:1vh 5vw;
-    margin: 5vh;
+    margin: 5vh 0;
 }
 .welcome{
     display: flex;
@@ -165,7 +165,6 @@ h1{
     justify-content: center;
     align-items: center;
 }
-/* о нас */
 .info{
     width: 100%;
     display: flex;
@@ -210,12 +209,12 @@ h1{
     height: 70vh;
 }
 .df>img{
+    min-width: 145px;
     height: 100%;
     width: 28vw;
     border-radius: 1vh;
     animation: galleray 3s linear infinite;
 }
-/* Заказ инфо */
 .order{
     display: flex;
     flex-direction: column;
@@ -254,19 +253,23 @@ h1{
 .conditions>ul>li:hover{
     text-shadow: 0 0 1vh var(--plum);
 }
-/* Карты */
 .map{
     padding: 5vh 0;
 }
 .map>span{
-    font-size: 2vh;
+    font-size: 2.4vh;
     color: var(--gray);
 }
-.map>iframe{
+.map-image{
     border-radius: 2vh;
     box-shadow: 0 0 2vh rgba(0, 0, 0, 0.315);
+    width: 100%;
+    height: 70vh;
+    display: block;
+    background-image: url(../img/map.jpg);
+    background-position: center;
+    background-size: cover;
 }
-/* Товары */
 .goods{
     display: flex;
     flex-wrap: wrap;
@@ -313,7 +316,6 @@ h1{
 .item4{background-image: url(../img/img14.jpg);}
 .item5{background-image: url(../img/img15.jpg);}
 .item6{background-image: url(../img/img16.jpg);}
-/* Футер */
 footer{
     background-color: var(--caramel);
     display: flex;
@@ -336,4 +338,100 @@ footer{
     color: var(--gray);
     font-weight: lighter;
     font-size: 2.5vh;
+}
+@media (max-width: 880px){
+    .df{
+       height: 50vh; 
+    }
+}
+@media (max-width: 650px){
+    .wel-2{
+        display: none;
+    }
+    .df{
+       height: 100%;
+       flex-wrap: wrap;
+       align-items: center;
+       justify-content: center;
+    }
+    .wel-1{
+        width: 100%;
+        flex-direction: column;
+        text-align: center;
+        gap: 5vh;
+    }
+    .wel-1>img{
+        width: 30vh;
+        height: 30vh;
+    }
+    .welcome{
+        align-items: center;
+        justify-content: center;
+    }
+    .welcome>hr{
+        display: none;
+    }
+    header{
+        padding: 0;
+    }
+    .logotype{
+        padding: .5vh 4vw;
+        z-index: 50;
+        background-color: var(--caramel);
+        width: 100%;
+        justify-content: left;
+        height: 9vh;
+    }
+    #nav{
+        position: absolute;
+        flex-direction: column;
+        width: 100%;
+        left: 0;
+        top: -30vh;
+        background-color: var(--caramel);
+        z-index: 49;
+    }
+}
+@media (max-width: 480px){
+    h1{
+        width: 100%;
+    }
+    .wel-1>div>span{
+        font-size: 4vh;
+    }
+    p{
+        font-size: 3vh;
+    }
+    .info>.first-p{
+        flex-direction: column;
+    }
+    .info>.middle-p{
+        display: none;
+    }
+    .conditions{
+        flex-direction: column-reverse;
+        gap: 5vh;
+    }
+    .conditions>ul{
+        width: 100%;
+    }
+    .conditions>img{
+        width: 100%;
+    }
+    .goods{
+        gap: 1vh;
+    }
+    .item{
+        width: 45vw;
+        height: 45vw;
+    }
+    .f1{
+        flex-direction: column;
+    }
+    .f1>div{
+        flex-direction: column;
+    }
+    .f1>div>a{
+        font-size: 2.5vh;
+    }
 }
